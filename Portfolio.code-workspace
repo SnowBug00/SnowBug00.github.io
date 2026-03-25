@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Portfolio",
+			"path": "."
+		},
+		{
+			"name": "PXE Deployment WINDOWS",
+			"path": "../Système/PXE Deployment WINDOWS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio"
+	}
+}
