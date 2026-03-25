@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Photo du site 01 - placeholder</title>
+  <desc id="desc">Emplacement reserve pour une photo du batiment.</desc>
+  <rect width="1200" height="800" fill="#eef4f9"/>
+  <rect x="70" y="70" width="1060" height="660" rx="32" fill="#ffffff" stroke="#cfdbe7" stroke-width="4"/>
+  <rect x="180" y="300" width="840" height="240" rx="24" fill="#dce9f2"/>
+  <rect x="300" y="220" width="180" height="80" fill="#dce9f2"/>
+  <rect x="520" y="220" width="180" height="80" fill="#dce9f2"/>
+  <rect x="740" y="220" width="180" height="80" fill="#dce9f2"/>
+  <path d="M160 620L360 470L520 540L720 390L1040 620" fill="none" stroke="#5c6d7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="920" cy="190" r="46" fill="#dce9f2"/>
+  <text x="120" y="130" fill="#123a52" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Photo du site 01
+  </text>
+  <text x="120" y="700" fill="#1d617f" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    Emplacement reserve pour une vue exterieure du batiment.
+  </text>
+</svg>
