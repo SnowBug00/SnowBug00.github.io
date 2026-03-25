@@ -1,0 +1,5 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration FAQ & Procédures"><defs><filter id="glowC" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="640" height="360" rx="12" fill="#0b1024"/><g filter="url(#glowC)"><rect x="80" y="90" width="300" height="120" rx="16" fill="#0f162b" stroke="#1f2a44"/><circle cx="120" cy="130" r="6" fill="#fb7185"/><circle cx="140" cy="130" r="6" fill="#a78bfa"/><rect x="110" y="150" width="220" height="10" rx="5" fill="#22d3ee"/><rect x="110" y="170" width="180" height="10" rx="5" fill="#a78bfa"/>
+<rect x="360" y="160" width="200" height="120" rx="16" fill="#0f162b" stroke="#1f2a44"/>
+<path d="M430 200 a18 18 0 1 1 12 0 v12" stroke="#22d3ee" stroke-width="6" fill="none"/>
+<circle cx="442" cy="230" r="3.5" fill="#22d3ee"/></g>
+<text x="20" y="335" fill="#94a3b8" font-family="Inter,system-ui" font-size="14">FAQ • Documentation</text></svg>
