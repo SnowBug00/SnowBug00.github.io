@@ -47,6 +47,17 @@
         <a class="nav-link" href="#veille">Veille</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Activer le thème sombre"
+      >
+        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+        <span class="theme-toggle-label">Sombre</span>
+      </button>
     </div>
   </header>
 
@@ -67,26 +78,6 @@
             <a class="button button-secondary" href="#contact">Me contacter</a>
           </div>
         </div>
-
-        <aside class="hero-panel card reveal" aria-labelledby="profile-title">
-          <p class="panel-label">Profil</p>
-          <h2 id="profile-title">En bref</h2>
-          <p class="hero-panel-intro">
-            Ce portfolio présente les éléments les plus représentatifs de mon parcours en BTS
-            SIO SISR, de mes expériences professionnelles et de ma progression dans les domaines
-            des systèmes, du réseau et du support informatique.
-          </p>
-          <ul class="profile-list">
-            <li><strong>Formation :</strong> BTS SIO option SISR, promotion 2024 - 2026</li>
-            <li><strong>Entreprises :</strong> Barolux et Auchan Luxembourg</li>
-            <li><strong>Domaines :</strong> systèmes, réseau, sécurité et support utilisateur</li>
-            <li><strong>Approche :</strong> progression par la pratique, les projets et la veille technique</li>
-          </ul>
-          <p class="hero-note">
-            Les projets et les expériences présentés ci-dessous illustrent concrètement les
-            compétences que je développe en contexte professionnel.
-          </p>
-        </aside>
       </div>
     </section>
 
@@ -199,7 +190,7 @@
         </div>
 
         <div class="company-grid">
-          <article class="card company-card reveal">
+          <article class="card company-card company-card-wide reveal">
             <p class="company-kicker">Barolux</p>
             <h3>Réseau et infrastructure sur sites professionnels</h3>
             <p>
@@ -266,6 +257,10 @@
               <span class="chip">Tickets</span>
               <span class="chip">Utilisateurs</span>
             </div>
+            <figure class="content-visual">
+              <img src="assets/img/orgasupport.png" alt="Organigramme de l’équipe support Auchan" />
+              <figcaption>Organigramme de l’équipe support.</figcaption>
+            </figure>
             <div class="company-outcome">
               <h4>Ce que cette équipe m’apporte</h4>
               <p>
@@ -291,6 +286,11 @@
               <span class="chip">Infrastructure</span>
               <span class="chip">Déploiement</span>
               <span class="chip">Support</span>
+            </div>
+            <div class="company-outcome company-outcome-compact">
+              <h4>Localisation</h4>
+              <p>Adresse : Eurohub Sud, 3434 Dudelange</p>
+              <p>Image du bâtiment et point GPS à ajouter.</p>
             </div>
             <div class="company-outcome">
               <h4>Ce que ce contexte m’a apporté</h4>
@@ -321,7 +321,7 @@
           <article class="card project-card reveal">
             <div class="project-aside">
               <p class="project-step">Projet 1</p>
-              <h3>Déploiement d’un réseau dédié Barolux sur le site Auchan de Dudelange</h3>
+              <h3>Déploiement d’un réseau dédié Barolux sur le site Auchan de Differdange</h3>
               <p class="project-role">
                 Projet réalisé dans le cadre de mon expérience chez Barolux, avec une forte
                 dimension terrain autour du câblage, de l’architecture physique et du
@@ -340,7 +340,7 @@
                 <h4>Contexte</h4>
                 <p>
                   Dans le cadre de mon expérience chez Barolux, j’ai participé à la mise en
-                  place d’un réseau dédié sur le site Auchan de Dudelange.
+                  place d’un réseau dédié sur le site Auchan de Differdange.
                 </p>
               </div>
 
@@ -380,6 +380,11 @@
                   matérielle que sur la logique d’architecture.
                 </p>
               </div>
+
+              <figure class="content-visual project-visual">
+                <img src="assets/img/auchandiff.jpeg" alt="Site Auchan de Differdange" />
+                <figcaption>Site Auchan de Differdange.</figcaption>
+              </figure>
 
             </div>
           </article>
@@ -575,6 +580,73 @@
                 <p>
                   Cette expérience m’a permis de mieux comprendre le fonctionnement d’un support
                   informatique et l’importance d’un bon suivi des incidents et des demandes.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-aside">
+              <p class="project-step">Projet 5</p>
+              <h3>Gestion de la solution d'encaissement Extenda au Luxembourg</h3>
+              <p class="project-role">
+                Projet réalisé dans le cadre du support informatique chez Auchan Luxembourg,
+                autour du réglage des incidents de caisse, du support aux collaborateurs et des
+                déplacements en magasin dans tout le pays.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Extenda</span>
+                <span class="chip">Encaissement</span>
+                <span class="chip">Support terrain</span>
+                <span class="chip">Luxembourg</span>
+              </div>
+            </div>
+
+            <div class="project-main">
+              <div class="project-block">
+                <h4>Contexte</h4>
+                <p>
+                  Dans le cadre de mes missions chez Auchan Luxembourg, j'interviens sur la
+                  solution d'encaissement Extenda utilisée dans les magasins du pays.
+                </p>
+              </div>
+
+              <div class="project-block">
+                <h4>Objectif</h4>
+                <p>
+                  Assurer le bon fonctionnement des caisses, régler les incidents et accompagner
+                  les collaborateurs lorsqu'un problème survient sur la solution d'encaissement.
+                </p>
+              </div>
+
+              <div class="project-block full-width">
+                <h4>Réalisations</h4>
+                <ul>
+                  <li>Réglage des problèmes pouvant survenir sur la solution Extenda.</li>
+                  <li>Gestion et suivi des masters de caisse.</li>
+                  <li>Support aux collaborateurs sur l'utilisation et le fonctionnement des caisses.</li>
+                  <li>Déplacements en magasin pour intervenir directement sur les incidents.</li>
+                  <li>Prise en charge de demandes sur différents sites au Luxembourg.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Compétences développées</h4>
+                <ul>
+                  <li>Support applicatif et matériel en environnement magasin.</li>
+                  <li>Diagnostic et résolution d'incidents liés à l'encaissement.</li>
+                  <li>Autonomie lors des interventions terrain.</li>
+                  <li>Communication avec les collaborateurs et les equipes locales.</li>
+                  <li>Organisation des priorités à l'échelle de plusieurs magasins.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Ce que ce projet m'a apporté</h4>
+                <p>
+                  Cette expérience m'a permis de renforcer ma réactivité, mon autonomie sur le
+                  terrain et ma capacité à assurer un support concret sur une solution critique
+                  pour l'activité des magasins.
                 </p>
               </div>
             </div>

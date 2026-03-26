@@ -1,12 +1,60 @@
 (function () {
   const navToggle = document.getElementById("navToggle");
   const siteNav = document.getElementById("siteNav");
+  const themeToggle = document.getElementById("themeToggle");
   const navLinks = Array.from(document.querySelectorAll(".nav-link"));
   const sections = Array.from(document.querySelectorAll("main section[id]"));
   const backToTop = document.getElementById("backToTop");
   const revealElements = Array.from(document.querySelectorAll(".reveal"));
   const year = document.getElementById("year");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+
+    if (themeToggle) {
+      const isDark = theme === "dark";
+      const label = themeToggle.querySelector(".theme-toggle-label");
+
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Activer le thème clair" : "Activer le thème sombre"
+      );
+
+      if (label) {
+        label.textContent = isDark ? "Clair" : "Sombre";
+      }
+    }
+
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute("content", theme === "dark" ? "#0c1722" : "#123a52");
+    }
+  }
+
+  const savedTheme = window.localStorage.getItem("theme");
+  const initialTheme = savedTheme || (prefersDarkScheme.matches ? "dark" : "light");
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme =
+        document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+      window.localStorage.setItem("theme", nextTheme);
+      applyTheme(nextTheme);
+    });
+  }
+
+  prefersDarkScheme.addEventListener("change", (event) => {
+    if (window.localStorage.getItem("theme")) {
+      return;
+    }
+
+    applyTheme(event.matches ? "dark" : "light");
+  });
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
