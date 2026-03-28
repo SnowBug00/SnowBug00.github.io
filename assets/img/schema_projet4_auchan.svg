@@ -1,0 +1,62 @@
+<svg width="560" height="386" viewBox="0 0 560 386" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="386" fill="#ffffff"/>
+
+  <!-- Titre -->
+  <text font-size="13" font-weight="700" fill="#1a1a1a" x="280" y="22" text-anchor="middle">Projet 4 — Gestion des tickets support via EasyVista</text>
+
+  <!-- Collaborateur -->
+  <rect x="180" y="36" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <text font-size="13" font-weight="700" fill="#1e40af" x="280" y="58" text-anchor="middle">Collaborateur</text>
+  <text font-size="10" fill="#1d4ed8" x="280" y="76" text-anchor="middle">Signale un problème informatique</text>
+
+  <!-- Flèche 1 -->
+  <line x1="280" y1="88" x2="280" y2="112" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text font-size="9" fill="#6b7280" x="290" y="104">Crée un ticket</text>
+
+  <!-- EasyVista -->
+  <rect x="180" y="114" width="200" height="52" rx="8" fill="#eff6ff" stroke="#1a4e8c" stroke-width="1.2"/>
+  <text font-size="13" font-weight="700" fill="#1a4e8c" x="280" y="136" text-anchor="middle">EasyVista</text>
+  <text font-size="10" fill="#1d4ed8" x="280" y="154" text-anchor="middle">Plateforme de gestion des tickets</text>
+
+  <!-- Flèche 2 -->
+  <line x1="280" y1="166" x2="280" y2="190" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text font-size="9" fill="#6b7280" x="290" y="182">Attribution</text>
+
+  <!-- Technicien support -->
+  <rect x="180" y="192" width="200" height="52" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.2"/>
+  <text font-size="13" font-weight="700" fill="#065f46" x="280" y="214" text-anchor="middle">Technicien support</text>
+  <text font-size="10" fill="#047857" x="280" y="232" text-anchor="middle">Analyse et traitement du ticket</text>
+
+  <!-- Branche gauche -->
+  <line x1="240" y1="244" x2="118" y2="274" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Branche droite -->
+  <line x1="320" y1="244" x2="442" y2="274" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Résolution -->
+  <rect x="30" y="276" width="176" height="52" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.2"/>
+  <text font-size="12" font-weight="700" fill="#065f46" x="118" y="298" text-anchor="middle">Résolution</text>
+  <text font-size="10" fill="#047857" x="118" y="316" text-anchor="middle">Problème réglé à distance ✓</text>
+
+  <!-- Escalade -->
+  <rect x="354" y="276" width="176" height="52" rx="8" fill="#fff7ed" stroke="#fb923c" stroke-width="1.2"/>
+  <text font-size="12" font-weight="700" fill="#92400e" x="442" y="298" text-anchor="middle">Escalade</text>
+  <text font-size="10" fill="#c2410c" x="442" y="316" text-anchor="middle">Transmis à l'équipe concernée</text>
+
+  <!-- Légende -->
+  <rect x="30" y="346" width="500" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="0.8"/>
+  <rect x="50"  y="356" width="12" height="10" rx="2" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+  <text font-size="10" fill="#374151" x="70" y="366">Demandeur</text>
+  <rect x="158" y="356" width="12" height="10" rx="2" fill="#eff6ff" stroke="#1a4e8c" stroke-width="0.8"/>
+  <text font-size="10" fill="#374151" x="178" y="366">Outil de ticketing</text>
+  <rect x="296" y="356" width="12" height="10" rx="2" fill="#d1fae5" stroke="#059669" stroke-width="0.8"/>
+  <text font-size="10" fill="#374151" x="316" y="366">Support / Résolution</text>
+  <rect x="440" y="356" width="12" height="10" rx="2" fill="#fff7ed" stroke="#fb923c" stroke-width="0.8"/>
+  <text font-size="10" fill="#374151" x="460" y="366">Escalade</text>
+</svg>
