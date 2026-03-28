@@ -17,6 +17,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -48,16 +49,6 @@
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        type="button"
-        aria-pressed="false"
-        aria-label="Activer le thème sombre"
-      >
-        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-        <span class="theme-toggle-label">Sombre</span>
-      </button>
     </div>
   </header>
 
@@ -85,26 +76,31 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">À propos</p>
-          <h2>Un parcours construit par la pratique</h2>
+          <h2>Qui suis-je ?</h2>
           <p class="section-intro">
-            Je suis étudiant en BTS SIO option SISR. Au fil de ma formation, j’ai développé un
-            intérêt marqué pour les environnements systèmes et réseaux, avec l’envie de
-            comprendre leur fonctionnement et d’intervenir de manière utile, structurée et concrète.
+            Je m’appelle Alexi Braun. Je suis actuellement en deuxième année de BTS SIO,
+            spécialité SISR — ce qui veut dire que je me forme à la gestion des systèmes
+            informatiques et des réseaux d’entreprise.
           </p>
         </div>
 
         <div class="about-grid">
           <article class="card content-card reveal">
             <p>
-              La spécialisation SISR m’a permis d’approfondir les environnements systèmes et
-              réseaux, avec une approche à la fois technique et opérationnelle. Pendant le BTS,
-              j’ai progressé sur l’installation de systèmes, l’administration de services
-              réseau, la segmentation d’un réseau et l’utilisation d’outils courants du métier.
+              Depuis le début de ma formation, j’ai toujours voulu comprendre comment les choses
+              fonctionnent concrètement : comment un ordinateur s’intègre dans un réseau
+              d’entreprise, comment les données circulent d’un site à l’autre, comment on
+              accompagne un utilisateur quand quelque chose ne marche plus.
             </p>
             <p>
-              L’alternance a joué un rôle important dans cette progression. Elle m’a permis de
-              gagner en rigueur, en méthode et en autonomie, tout en découvrant la réalité du
-              support, du déploiement de postes et du travail en environnement professionnel.
+              Mon alternance chez Auchan Luxembourg et Barolux m’a donné exactement ça : la
+              possibilité de mettre les mains dans le concret dès la première année. J’ai
+              appris à travailler en équipe, à gérer des situations imprévues, à m’adapter
+              rapidement — et à prendre confiance dans mes interventions.
+            </p>
+            <p>
+              Ce portfolio résume ce que j’ai fait, ce que j’en ai retenu, et ce que ça m’a
+              apporté au-delà des compétences techniques.
             </p>
           </article>
 
@@ -118,12 +114,12 @@
               <strong>2024 - 2026</strong>
             </div>
             <div class="summary-item">
-              <span class="summary-label">Axes principaux</span>
-              <strong>Systèmes, réseau, sécurité, support</strong>
+              <span class="summary-label">Rythme</span>
+              <strong>Alternance — 2 semaines école / 2 semaines entreprise</strong>
             </div>
             <div class="summary-item">
-              <span class="summary-label">Progression</span>
-              <strong>Formation, projets techniques et entreprise</strong>
+              <span class="summary-label">Ce que j’aime</span>
+              <strong>Comprendre, intervenir, résoudre</strong>
             </div>
           </aside>
         </div>
@@ -181,126 +177,152 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Entreprises</p>
-          <h2>Deux environnements complémentaires</h2>
+          <h2>Deux entreprises, deux réalités du terrain</h2>
           <p class="section-intro">
-            Mes expériences chez Barolux et Auchan Luxembourg m’ont permis d’évoluer dans des
-            contextes techniques différents, avec d’un côté une forte dimension réseau et
-            infrastructure, et de l’autre un environnement orienté support et déploiement.
+            Mon alternance m’a fait vivre deux environnements très différents : d’un côté une
+            grande enseigne de distribution avec des dizaines de magasins à maintenir, de l’autre
+            une filiale technique spécialisée dans les réseaux et l’infrastructure des bâtiments.
           </p>
         </div>
 
-        <div class="company-grid">
-          <article class="card company-card reveal">
-            <p class="company-kicker">Barolux</p>
-            <h3>Réseau et infrastructure sur sites professionnels</h3>
-            <p>
-              Barolux m’a permis de participer à des missions liées au réseau et à
-              l’infrastructure sur des sites professionnels. Cette expérience m’a permis de
-              découvrir le déploiement concret d’équipements réseau, le câblage, l’utilisation
-              de la fibre optique et la configuration de matériels comme les switches Hirschmann
-              et les pare-feux Fortinet.
-            </p>
-            <div class="company-meta">
-              <span class="chip">Fibre optique</span>
-              <span class="chip">RJ45</span>
-              <span class="chip">Hirschmann</span>
-              <span class="chip">Fortinet</span>
-              <span class="chip">Infrastructure physique</span>
-            </div>
-            <div class="company-outcome">
-              <h4>Ce que cette expérience m’a apporté</h4>
-              <p>
-                Une première approche concrète du terrain, du déploiement réseau et de la
-                logique d’architecture utilisée en environnement professionnel.
-              </p>
-            </div>
-          </article>
+        <div class="company-blocks">
 
-          <article class="card company-card reveal">
-            <p class="company-kicker">Auchan Luxembourg</p>
-            <h3>Support informatique et gestion de postes utilisateurs</h3>
-            <p>
-              Chez Auchan Luxembourg, j’ai travaillé dans un environnement de support
-              informatique et de gestion de postes utilisateurs. Cette expérience m’a permis de
-              participer à la préparation de postes, à leur intégration dans l’environnement
-              interne, au déploiement auprès des collaborateurs, ainsi qu’au traitement de
-              tickets via EasyVista.
-            </p>
-            <div class="company-meta">
-              <span class="chip">Support utilisateur</span>
-              <span class="chip">Active Directory</span>
-              <span class="chip">Déploiement</span>
-              <span class="chip">EasyVista</span>
+          <!-- ── AUCHAN LUXEMBOURG ─────────────────────────────── -->
+          <div class="company-block company-block--auchan">
+            <div class="company-block-header reveal">
+              <div class="company-block-intro">
+                <h3 class="company-block-name">Auchan Luxembourg</h3>
+                <p>
+                  Auchan Luxembourg, c’est une dizaine de sites répartis sur tout le pays —
+                  hypermarchés, supermarchés, galeries commerciales. Derrière chaque magasin,
+                  il y a une infrastructure informatique à maintenir en permanence : des centaines
+                  de postes, des caisses, des serveurs, des réseaux. C’est dans ce contexte que
+                  j’interviens au quotidien, au sein du service support.
+                </p>
+              </div>
             </div>
-            <div class="company-outcome">
-              <h4>Ce que cette expérience m’a apporté</h4>
-              <p>
-                Une meilleure maîtrise du support informatique, de la préparation de postes et
-                du travail dans un environnement où la rigueur et la qualité de service sont
-                essentielles.
-              </p>
-            </div>
-          </article>
 
-          <article class="card company-card company-card-wide reveal">
-            <p class="company-kicker">Équipe support</p>
-            <h3>Mon équipe actuelle chez Auchan</h3>
-            <p>
-              J’évolue actuellement au sein d’une équipe orientée support informatique, où le
-              travail collectif, la réactivité et la qualité de service sont essentiels. Cet
-              environnement me permet de progresser dans le traitement des demandes, le suivi
-              des incidents et l’accompagnement des utilisateurs au quotidien.
-            </p>
-            <div class="company-meta">
-              <span class="chip">Travail d’équipe</span>
-              <span class="chip">Support</span>
-              <span class="chip">Tickets</span>
-              <span class="chip">Utilisateurs</span>
-            </div>
-            <figure class="content-visual">
-              <img src="assets/img/orgasupport.png" alt="Organigramme de l’équipe support Auchan" />
-              <figcaption>Organigramme de l’équipe support.</figcaption>
-            </figure>
-            <div class="company-outcome">
-              <h4>Ce que cette équipe m’apporte</h4>
-              <p>
-                Une meilleure compréhension du fonctionnement d’un service support, de la
-                communication avec les utilisateurs et de l’importance d’un suivi rigoureux des
-                demandes.
-              </p>
-            </div>
-          </article>
+            <div class="company-grid">
+              <article class="card company-card reveal">
+                <p class="company-kicker">Mon rôle</p>
+                <h3>Au cœur du support informatique des magasins</h3>
+                <p>
+                  Mon rôle chez Auchan, c’est d’être le premier point de contact quand
+                  quelque chose ne fonctionne plus. Un ordinateur qui ne démarre pas, une caisse
+                  bloquée, un nouveau poste à préparer pour un collaborateur — c’est mon périmètre.
+                  Je gère les demandes, je les résous quand c’est possible, je les transfère aux
+                  bonnes équipes sinon.
+                </p>
+                <div class="company-meta">
+                  <span class="chip">Support utilisateur</span>
+                  <span class="chip">Gestion de tickets</span>
+                  <span class="chip">Déploiement de postes</span>
+                  <span class="chip">EasyVista</span>
+                </div>
+                <div class="company-outcome">
+                  <h4>Ce que ça m’a appris</h4>
+                  <p>
+                    Travailler vite sans bâcler. Comprendre la demande avant d’agir.
+                    Savoir expliquer clairement à quelqu’un qui n’est pas informaticien ce
+                    qu’on est en train de faire — et pourquoi.
+                  </p>
+                </div>
+              </article>
 
-          <article class="card company-card company-card-wide reveal">
-            <p class="company-kicker">Site de Dudelange</p>
-            <h3>Les bureaux Auchan de Dudelange</h3>
-            <p>
-              Le site des bureaux Auchan de Dudelange représente un environnement concret de
-              travail dans lequel j’ai pu intervenir sur des missions liées au réseau, au
-              déploiement et au support. Ce contexte m’a permis de mieux comprendre la
-              structuration d’un site professionnel et les contraintes techniques liées à son
-              fonctionnement quotidien.
-            </p>
-            <div class="company-meta">
-              <span class="chip">Environnement réel</span>
-              <span class="chip">Infrastructure</span>
-              <span class="chip">Déploiement</span>
-              <span class="chip">Support</span>
+              <article class="card company-card reveal">
+                <p class="company-kicker">Mon équipe</p>
+                <h3>Une équipe support soudée et réactive</h3>
+                <p>
+                  Je fais partie d’une petite équipe dédiée au support. On se répartit les
+                  demandes, on se donne des coups de main quand une situation est complexe, et
+                  on assure une disponibilité continue pour que les magasins puissent fonctionner
+                  sans interruption. C’est un vrai travail d’équipe, où la communication compte
+                  autant que la technique.
+                </p>
+                <div class="company-meta">
+                  <span class="chip">Travail d’équipe</span>
+                  <span class="chip">Réactivité</span>
+                  <span class="chip">Qualité de service</span>
+                </div>
+                <figure class="content-visual">
+                  <img src="assets/img/orgasupport.png" alt="Organigramme de l’équipe support Auchan" data-lightbox />
+                  <figcaption>Organigramme de l’équipe support — cliquer pour agrandir.</figcaption>
+                </figure>
+              </article>
+
+              <article class="card company-card company-card-wide reveal">
+                <p class="company-kicker">Mon site principal</p>
+                <h3>Les bureaux de Dudelange — ma base de travail</h3>
+                <p>
+                  Le siège du service informatique est basé à Dudelange, dans la zone Eurohub Sud.
+                  C’est là que se trouve mon équipe, que je prépare les équipements, que je traite
+                  les tickets à distance — et d’où je pars pour les interventions dans les magasins
+                  à travers tout le Luxembourg.
+                </p>
+                <div class="company-meta">
+                  <span class="chip">Eurohub Sud, Dudelange</span>
+                  <span class="chip">Base opérationnelle</span>
+                  <span class="chip">Interventions multi-sites</span>
+                </div>
+              </article>
+
+              <div class="card company-card company-card-wide reveal">
+                <p class="company-kicker">Présence multi-sites</p>
+                <h3>Les hypermarchés Auchan au Luxembourg</h3>
+                <p class="project-map-intro">Le service support couvre l’ensemble des sites Auchan au Luxembourg. Chaque magasin est un terrain d’intervention potentiel.</p>
+                <div id="map-auchan" class="project-map" aria-label="Carte des sites Auchan Luxembourg"></div>
+              </div>
             </div>
-            <div class="company-outcome company-outcome-compact">
-              <h4>Localisation</h4>
-              <p>Adresse : Eurohub Sud, 3434 Dudelange</p>
-              <p>Image du bâtiment et point GPS à ajouter.</p>
+          </div>
+
+          <!-- ── BAROLUX ───────────────────────────────────────── -->
+          <div class="company-block company-block--barolux">
+            <div class="company-block-header reveal">
+              <div class="company-block-logo">
+                <img src="assets/img/barolux.png" alt="Logo Barolux" />
+              </div>
+              <div class="company-block-intro">
+                <h3 class="company-block-name">Barolux</h3>
+                <p>
+                  Barolux est une filiale technique du groupe Auchan Luxembourg. Sa spécialité :
+                  assurer la maintenance et le bon fonctionnement des équipements dans les
+                  bâtiments du groupe — chauffage, sécurité incendie, systèmes automatisés.
+                  Pour que tout ça fonctionne, il faut un réseau fiable qui relie les sites
+                  entre eux. C’est là que j’ai eu un rôle concret.
+                </p>
+              </div>
             </div>
-            <div class="company-outcome">
-              <h4>Ce que ce contexte m’a apporté</h4>
-              <p>
-                Une vision plus concrète de l’organisation d’un site professionnel, de ses
-                besoins techniques et de la coordination nécessaire entre infrastructure,
-                matériel et utilisateurs.
-              </p>
+
+            <div class="company-grid">
+              <article class="card company-card company-card-wide reveal">
+                <p class="company-kicker">Mon rôle</p>
+                <h3>Construire le réseau qui fait circuler les données entre les sites</h3>
+                <p>
+                  Chez Barolux, j’ai participé à la mise en place des réseaux qui permettent
+                  aux équipements techniques des bâtiments de communiquer entre eux. Concrètement :
+                  tirer des câbles, installer des équipements réseau dans les armoires
+                  techniques, relier les sites entre eux à distance de façon sécurisée.
+                  C’est un travail de terrain, physique, où chaque câble mal posé peut faire
+                  tomber une partie du réseau.
+                </p>
+                <div class="company-meta">
+                  <span class="chip">Câblage réseau</span>
+                  <span class="chip">Fibre optique</span>
+                  <span class="chip">Équipements réseau</span>
+                  <span class="chip">Sécurisation des échanges</span>
+                </div>
+                <div class="company-outcome">
+                  <h4>Ce que ça m’a appris</h4>
+                  <p>
+                    La rigueur du travail terrain : ici, une erreur de câblage, c’est une
+                    panne. J’ai appris à être précis, méthodique, et à vérifier chaque étape
+                    avant de passer à la suivante.
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
+
         </div>
       </div>
     </section>
@@ -309,16 +331,16 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Projets</p>
-          <h2>Projets marquants et réalisations</h2>
+          <h2>Ce que j'ai fait, concrètement</h2>
           <p class="section-intro">
-            Cette sélection met en avant les projets les plus représentatifs de mon parcours, à
-            la fois sur la partie réseau et infrastructure chez Barolux, puis sur la partie
-            support et déploiement de postes chez Auchan Luxembourg.
+            Voici les projets qui m'ont le plus marqué durant mon alternance. Pour chacun,
+            j'explique ce que j'ai fait, ce que ça impliquait en pratique, et ce que ça
+            m'a apporté personnellement.
           </p>
         </div>
 
         <div class="projects-stack">
-          <article class="card project-card reveal">
+          <article class="card project-card project-card--barolux reveal">
             <div class="project-aside">
               <p class="project-step">Projet 1</p>
               <h3>Déploiement d’un réseau dédié Barolux sur le site Auchan de Differdange</h3>
@@ -337,316 +359,295 @@
 
             <div class="project-main">
               <div class="project-block">
-                <h4>Contexte</h4>
+                <h4>Situation</h4>
                 <p>
-                  Dans le cadre de mon expérience chez Barolux, j’ai participé à la mise en
-                  place d’un réseau dédié sur le site Auchan de Differdange.
+                  Barolux avait besoin d’un réseau indépendant sur le site Auchan de Differdange
+                  pour relier ses équipements techniques — chauffage, régulation, automatismes.
+                  Ce réseau devait être séparé du réseau Auchan et couvrir l’ensemble du bâtiment.
                 </p>
               </div>
 
               <div class="project-block">
-                <h4>Objectif</h4>
-                <p>Créer une infrastructure réseau propre à Barolux sur l’ensemble du bâtiment.</p>
+                <h4>Mon rôle concret</h4>
+                <p>
+                  J’ai participé à l’installation complète sur le terrain : pose et branchement
+                  de 6 équipements réseau (appelés switches) dans les armoires techniques,
+                  tirage de câbles à travers le bâtiment, création manuelle de câbles réseau,
+                  et interconnexion des équipements via la fibre optique.
+                </p>
               </div>
 
               <div class="project-block full-width">
-                <h4>Réalisations</h4>
+                <h4>Ce que j’ai fait, étape par étape</h4>
                 <ul>
-                  <li>Installation de 6 switches Hirschmann.</li>
-                  <li>Mise en place d’une architecture avec 1 switch cœur de réseau et 5 switches reliés à celui-ci.</li>
-                  <li>Interconnexion des switches en fibre optique.</li>
-                  <li>Câblage dans des baies existantes.</li>
-                  <li>Réalisation de câbles RJ45.</li>
-                  <li>Participation à la conception du plan réseau.</li>
+                  <li>Installation de 6 équipements réseau (switches Hirschmann) dans les armoires du site.</li>
+                  <li>Mise en place d’une architecture en étoile : un équipement central relié aux 5 autres.</li>
+                  <li>Connexion entre les équipements par fibre optique pour des liaisons rapides et stables.</li>
+                  <li>Câblage dans les baies existantes et fabrication manuelle de câbles RJ45.</li>
+                  <li>Participation à la conception du schéma du réseau.</li>
                 </ul>
               </div>
 
               <div class="project-block">
-                <h4>Compétences développées</h4>
-                <ul>
-                  <li>Configuration et utilisation de switches Hirschmann.</li>
-                  <li>Brassage et câblage réseau.</li>
-                  <li>Utilisation de la fibre optique.</li>
-                  <li>Organisation d’une infrastructure physique.</li>
-                  <li>Lecture et conception d’un plan réseau.</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Ce que ce projet m’a apporté</h4>
+                <h4>Ce que ça m’a apporté</h4>
                 <p>
-                  Ce projet m’a permis de découvrir concrètement le déploiement d’une
-                  infrastructure réseau en environnement professionnel, aussi bien sur la partie
-                  matérielle que sur la logique d’architecture.
+                  C’était la première fois que je déployais un réseau complet en conditions
+                  réelles. J’ai compris que la théorie et le terrain, c’est très différent :
+                  les contraintes physiques, la logique du câblage, la précision que ça
+                  demande. Ça m’a rendu beaucoup plus à l’aise sur tout ce qui touche
+                  à l’infrastructure réseau.
                 </p>
               </div>
 
               <figure class="content-visual project-visual">
+                <img src="assets/img/schema_reseau_projet1_barolux.svg" alt="Schéma du réseau déployé sur le site Auchan de Differdange" data-lightbox />
+                <figcaption>Schéma du réseau Barolux déployé sur le site de Differdange — cliquer pour agrandir.</figcaption>
+              </figure>
+
+              <figure class="content-visual project-visual">
                 <img src="assets/img/auchandiff.jpeg" alt="Site Auchan de Differdange" />
-                <figcaption>Site Auchan de Differdange.</figcaption>
+                <figcaption>Site Auchan de Differdange — lieu du déploiement réseau.</figcaption>
               </figure>
 
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card project-card--barolux reveal">
             <div class="project-aside">
               <p class="project-step">Projet 2</p>
-              <h3>Gestion de pare-feux Fortinet et tunnels IPsec</h3>
+              <h3>Relier les sites Barolux entre eux de façon sécurisée</h3>
               <p class="project-role">
-                Projet réalisé chez Barolux autour de l’interconnexion de plusieurs sites et de
-                la sécurisation des communications réseau.
+                Barolux intervient sur plusieurs sites. Pour récupérer les données de ses
+                équipements à distance, il fallait créer des connexions sécurisées entre
+                ces sites — sans passer par un accès public non protégé.
               </p>
               <div class="project-meta">
-                <span class="chip">Fortinet</span>
-                <span class="chip">IPsec</span>
-                <span class="chip">VPN</span>
-                <span class="chip">Intersites</span>
+                <span class="chip">Barolux</span>
+                <span class="chip">Pare-feu Fortinet</span>
+                <span class="chip">Tunnel sécurisé</span>
+                <span class="chip">Multi-sites</span>
               </div>
             </div>
 
             <div class="project-main">
               <div class="project-block">
-                <h4>Contexte</h4>
+                <h4>Situation</h4>
                 <p>
-                  Chez Barolux, j’ai travaillé sur la mise en relation de plusieurs sites à
-                  l’aide de pare-feux Fortinet.
+                  Les équipements techniques de Barolux (régulation, chauffage, automatismes)
+                  sont répartis sur plusieurs bâtiments. Les techniciens avaient besoin de
+                  consulter les données de ces équipements depuis un seul endroit, sans se
+                  déplacer sur chaque site.
                 </p>
               </div>
 
               <div class="project-block">
-                <h4>Objectif</h4>
+                <h4>Mon rôle concret</h4>
                 <p>
-                  Permettre la communication entre les différents sites afin de récupérer les
-                  informations des matériels utilisés par les automaticiens.
+                  J’ai travaillé sur la configuration des pare-feux — des équipements qui
+                  contrôlent ce qui entre et sort d’un réseau — pour créer des tunnels chiffrés
+                  entre les sites. Concrètement, c’est comme créer un couloir privé et
+                  sécurisé entre deux bâtiments, à travers Internet.
                 </p>
               </div>
 
               <div class="project-block full-width">
-                <h4>Réalisations</h4>
+                <h4>Ce que j’ai fait</h4>
                 <ul>
-                  <li>Configuration de pare-feux Fortinet.</li>
-                  <li>Mise en place de tunnels IPsec.</li>
-                  <li>Participation à l’interconnexion de plusieurs sites.</li>
+                  <li>Configuration des pare-feux Fortinet sur chaque site concerné.</li>
+                  <li>Mise en place de tunnels chiffrés (IPsec) entre les sites pour sécuriser les échanges.</li>
+                  <li>Tests de connectivité pour vérifier que les sites communiquaient correctement.</li>
                 </ul>
               </div>
 
               <div class="project-block">
-                <h4>Compétences développées</h4>
-                <ul>
-                  <li>Configuration de pare-feux Fortinet.</li>
-                  <li>Mise en œuvre de tunnels VPN IPsec.</li>
-                  <li>Compréhension des échanges intersites.</li>
-                  <li>Notions de sécurité réseau.</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Ce que ce projet m’a apporté</h4>
+                <h4>Ce que ça m’a apporté</h4>
                 <p>
-                  Ce projet m’a permis de mieux comprendre la sécurisation des échanges réseau
-                  entre plusieurs sites et le rôle d’un pare-feu dans une infrastructure
-                  professionnelle.
+                  J’ai compris comment une entreprise sécurise ses communications à distance.
+                  Avant ce projet, je savais qu’un pare-feu "filtrait" le réseau — après,
+                  je savais aussi le configurer pour un cas concret. C’est une compétence
+                  directement liée à la cybersécurité.
                 </p>
               </div>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card project-card--auchan reveal">
             <div class="project-aside">
               <p class="project-step">Projet 3</p>
-              <h3>Migration Citrix vers des postes HP sous domaine Windows - Auchan Luxembourg</h3>
+              <h3>Remplacer les anciens postes partagés par des ordinateurs individuels</h3>
               <p class="project-role">
-                <strong>Mon rôle :</strong> je n’ai pas piloté toute la migration. Mon
-                intervention portait principalement sur la préparation des postes, leur
-                vérification dans l’Active Directory, puis leur déploiement auprès des
-                collaborateurs.
+                Auchan Luxembourg remplaçait une ancienne solution où les collaborateurs
+                travaillaient sur des terminaux sans disque dur par de vrais ordinateurs
+                individuels. J’ai participé à la préparation et à la remise en place de
+                ces postes auprès des utilisateurs.
               </p>
               <div class="project-meta">
                 <span class="chip">Auchan Luxembourg</span>
-                <span class="chip">PXE</span>
-                <span class="chip">Active Directory</span>
+                <span class="chip">Déploiement de postes</span>
+                <span class="chip">Intégration réseau</span>
                 <span class="chip">Postes HP</span>
               </div>
             </div>
 
             <div class="project-main">
               <div class="project-block">
-                <h4>Contexte</h4>
+                <h4>Situation</h4>
                 <p>
-                  Chez Auchan Luxembourg, j’ai participé à un projet de migration visant à
-                  remplacer une solution Citrix utilisée par les collaborateurs par des
-                  ordinateurs HP intégrés à un domaine Windows.
+                  Les collaborateurs utilisaient une solution ancienne (Citrix) où tout était
+                  centralisé sur des serveurs distants. Auchan a décidé de passer à des
+                  ordinateurs individuels, plus autonomes et intégrés directement dans le
+                  réseau de l’entreprise.
                 </p>
               </div>
 
               <div class="project-block">
-                <h4>Objectif</h4>
+                <h4>Mon rôle concret</h4>
                 <p>
-                  Accompagner la transition vers une solution interne basée sur des postes
-                  physiques intégrés au domaine de l’entreprise.
+                  Je n’ai pas géré le projet dans son ensemble, mais j’ai pris en charge
+                  une étape clé : préparer les machines, les faire s’installer automatiquement
+                  via le réseau, vérifier qu’elles apparaissaient bien dans l’annuaire
+                  informatique de l’entreprise, puis les remettre en main aux utilisateurs.
                 </p>
               </div>
 
               <div class="project-block full-width">
-                <h4>Réalisations</h4>
+                <h4>Ce que j’ai fait</h4>
                 <ul>
-                  <li>Préparation des postes avant mise à disposition.</li>
-                  <li>Démarrage des machines avec déploiement PXE.</li>
-                  <li>Remontée automatique des postes dans l’Active Directory avec attribution d’un nom.</li>
-                  <li>Vérification dans l’Active Directory.</li>
-                  <li>Déploiement des postes auprès des collaborateurs une fois la préparation terminée.</li>
+                  <li>Branchement des ordinateurs et démarrage de l’installation automatique via le réseau (sans clé USB ni DVD).</li>
+                  <li>Vérification que chaque machine était bien enregistrée dans l’annuaire informatique de l’entreprise, avec le bon nom.</li>
+                  <li>Remise en place du poste auprès du collaborateur concerné, avec vérification que tout fonctionnait.</li>
                 </ul>
               </div>
 
               <div class="project-block">
-                <h4>Compétences développées</h4>
-                <ul>
-                  <li>Préparation et déploiement de postes.</li>
-                  <li>Utilisation du déploiement PXE.</li>
-                  <li>Vérification dans l’Active Directory.</li>
-                  <li>Rigueur dans la mise à disposition du matériel utilisateur.</li>
-                  <li>Travail en environnement professionnel.</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Ce que ce projet m’a apporté</h4>
+                <h4>Ce que ça m’a apporté</h4>
                 <p>
-                  Ce projet m’a permis de participer à une migration concrète en entreprise et
-                  de mieux comprendre les étapes nécessaires avant le déploiement d’un poste à
-                  un utilisateur final.
+                  J’ai appris à travailler sur un déploiement à grande échelle, avec une
+                  vraie rigueur de procédure. Chaque poste mal préparé, c’est un utilisateur
+                  bloqué le lendemain matin. Ça m’a vraiment sensibilisé à l’importance du
+                  soin et de la méthode dans ce type de mission.
                 </p>
               </div>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card project-card--auchan reveal">
             <div class="project-aside">
               <p class="project-step">Projet 4</p>
-              <h3>Gestion de tickets et support utilisateur sur EasyVista</h3>
+              <h3>Gérer les demandes des utilisateurs au quotidien</h3>
               <p class="project-role">
-                Projet réalisé dans le cadre du support informatique chez Auchan Luxembourg,
-                avec une logique de suivi, de priorisation et de traitement des demandes.
+                Chaque jour, des collaborateurs Auchan rencontrent des problèmes informatiques.
+                Mon rôle est de traiter ces demandes, les résoudre quand c’est de mon ressort,
+                et les orienter vers la bonne équipe sinon — via un outil de gestion appelé EasyVista.
               </p>
               <div class="project-meta">
+                <span class="chip">Auchan Luxembourg</span>
+                <span class="chip">Support utilisateur</span>
                 <span class="chip">EasyVista</span>
-                <span class="chip">Support</span>
-                <span class="chip">Tickets</span>
-                <span class="chip">Utilisateurs</span>
+                <span class="chip">Gestion des priorités</span>
               </div>
             </div>
 
             <div class="project-main">
               <div class="project-block">
-                <h4>Contexte</h4>
+                <h4>Situation</h4>
                 <p>
-                  Dans le cadre du support chez Auchan, j’ai utilisé l’application EasyVista
-                  pour le traitement des demandes et incidents.
+                  Le service support reçoit chaque jour des dizaines de demandes : un écran
+                  qui ne s’allume plus, un mot de passe bloqué, un logiciel qui plante, un
+                  nouveau collaborateur à équiper... Tout passe par un outil commun qui permet
+                  de suivre chaque demande du début à la fin.
                 </p>
               </div>
 
               <div class="project-block">
-                <h4>Objectif</h4>
+                <h4>Mon rôle concret</h4>
                 <p>
-                  Assurer le suivi des tickets et contribuer à la résolution ou à la redirection
-                  des demandes selon leur nature.
+                  Je prends en charge les demandes qui arrivent dans la file, j’analyse
+                  le problème, je contacte l’utilisateur si besoin, et je résous ce que
+                  je peux résoudre à distance. Si le problème dépasse mon périmètre, je
+                  le transfère à l’équipe concernée avec un résumé clair de la situation.
                 </p>
               </div>
 
               <div class="project-block full-width">
-                <h4>Réalisations</h4>
+                <h4>Exemples concrets traités</h4>
                 <ul>
-                  <li>Prise en charge de tickets utilisateurs.</li>
-                  <li>Résolution de problèmes selon le périmètre du support.</li>
-                  <li>Redirection des tickets vers les bons services lorsque nécessaire.</li>
-                  <li>Suivi des demandes dans l’outil EasyVista.</li>
+                  <li>Réinitialisation de comptes bloqués pour des collaborateurs qui ne pouvaient plus accéder à leur poste.</li>
+                  <li>Résolution de problèmes d’imprimantes réseau dans les bureaux et en magasin.</li>
+                  <li>Redirection vers les équipes spécialisées pour des demandes hors périmètre support.</li>
+                  <li>Suivi des tickets non résolus et relances auprès des équipes concernées.</li>
                 </ul>
               </div>
 
               <div class="project-block">
-                <h4>Compétences développées</h4>
-                <ul>
-                  <li>Utilisation d’un outil de ticketing.</li>
-                  <li>Support utilisateur.</li>
-                  <li>Analyse de demandes.</li>
-                  <li>Gestion des priorités.</li>
-                  <li>Communication avec les utilisateurs et les équipes.</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Ce que ce projet m’a apporté</h4>
+                <h4>Ce que ça m’a apporté</h4>
                 <p>
-                  Cette expérience m’a permis de mieux comprendre le fonctionnement d’un support
-                  informatique et l’importance d’un bon suivi des incidents et des demandes.
+                  C’est la mission qui m’a le plus appris sur la communication. Un utilisateur
+                  bloqué est souvent stressé — il faut être calme, aller droit au but, expliquer
+                  sans jargon. J’ai aussi beaucoup progressé dans la gestion des priorités :
+                  quand tout arrive en même temps, il faut savoir choisir quoi traiter en premier.
                 </p>
               </div>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card project-card--auchan reveal">
             <div class="project-aside">
               <p class="project-step">Projet 5</p>
-              <h3>Gestion de la solution d'encaissement Extenda au Luxembourg</h3>
+              <h3>Intervenir sur les caisses des magasins Auchan au Luxembourg</h3>
               <p class="project-role">
-                Projet réalisé dans le cadre du support informatique chez Auchan Luxembourg,
-                autour du réglage des incidents de caisse, du support aux collaborateurs et des
-                déplacements en magasin dans tout le pays.
+                Quand une caisse tombe en panne dans un magasin Auchan, chaque minute compte.
+                Certains problèmes ne peuvent pas être réglés à distance — il faut se déplacer
+                sur place. C’est une partie importante de mon quotidien.
               </p>
               <div class="project-meta">
-                <span class="chip">Extenda</span>
-                <span class="chip">Encaissement</span>
-                <span class="chip">Support terrain</span>
-                <span class="chip">Luxembourg</span>
+                <span class="chip">Auchan Luxembourg</span>
+                <span class="chip">Logiciel de caisse Extenda</span>
+                <span class="chip">Interventions terrain</span>
+                <span class="chip">Multi-sites</span>
               </div>
             </div>
 
             <div class="project-main">
               <div class="project-block">
-                <h4>Contexte</h4>
+                <h4>Situation</h4>
                 <p>
-                  Dans le cadre de mes missions chez Auchan Luxembourg, j'interviens sur la
-                  solution d'encaissement Extenda utilisée dans les magasins du pays.
+                  Les magasins Auchan utilisent un logiciel d’encaissement appelé Extenda.
+                  Quand une caisse plante ou se comporte anormalement, ça bloque directement
+                  les clients en file d’attente. Le service support doit réagir rapidement,
+                  et parfois la seule solution c’est d’aller sur place.
                 </p>
               </div>
 
               <div class="project-block">
-                <h4>Objectif</h4>
+                <h4>Pourquoi les déplacements en magasin ?</h4>
                 <p>
-                  Assurer le bon fonctionnement des caisses, régler les incidents et accompagner
-                  les collaborateurs lorsqu'un problème survient sur la solution d'encaissement.
+                  Certaines pannes ne peuvent pas être résolues à distance : un écran tactile
+                  qui répond mal, un périphérique débranché, une caisse qui nécessite une
+                  manipulation physique. Dans ces cas-là, je me déplace directement dans le
+                  magasin concerné — parfois à l’autre bout du Luxembourg — pour intervenir
+                  sur place et remettre la caisse en service le plus vite possible.
                 </p>
               </div>
 
               <div class="project-block full-width">
-                <h4>Réalisations</h4>
+                <h4>Exemples concrets d’interventions</h4>
                 <ul>
-                  <li>Réglage des problèmes pouvant survenir sur la solution Extenda.</li>
-                  <li>Gestion et suivi des masters de caisse.</li>
-                  <li>Support aux collaborateurs sur l'utilisation et le fonctionnement des caisses.</li>
-                  <li>Déplacements en magasin pour intervenir directement sur les incidents.</li>
-                  <li>Prise en charge de demandes sur différents sites au Luxembourg.</li>
+                  <li>Redémarrage et reconfiguration de caisses bloquées en heure de pointe, avec des clients en attente.</li>
+                  <li>Remplacement d’une caisse défaillante par une caisse de secours pour ne pas interrompre l’activité.</li>
+                  <li>Accompagnement d’un nouveau collaborateur sur l’utilisation du logiciel de caisse.</li>
+                  <li>Déplacement sur plusieurs sites dans la même journée pour traiter plusieurs incidents en parallèle.</li>
                 </ul>
               </div>
 
               <div class="project-block">
-                <h4>Compétences développées</h4>
-                <ul>
-                  <li>Support applicatif et matériel en environnement magasin.</li>
-                  <li>Diagnostic et résolution d'incidents liés à l'encaissement.</li>
-                  <li>Autonomie lors des interventions terrain.</li>
-                  <li>Communication avec les collaborateurs et les equipes locales.</li>
-                  <li>Organisation des priorités à l'échelle de plusieurs magasins.</li>
-                </ul>
-              </div>
-
-              <div class="project-block">
-                <h4>Ce que ce projet m'a apporté</h4>
+                <h4>Ce que ça m’a apporté</h4>
                 <p>
-                  Cette expérience m'a permis de renforcer ma réactivité, mon autonomie sur le
-                  terrain et ma capacité à assurer un support concret sur une solution critique
-                  pour l'activité des magasins.
+                  Ces interventions terrain m’ont appris à gérer la pression : en magasin,
+                  tout le monde attend que ça remarche. J’ai développé beaucoup d’autonomie
+                  — on arrive seul, on diagnostique, on trouve une solution. Et j’ai appris
+                  à communiquer avec des responsables de magasin qui ont besoin de réponses
+                  claires, pas de jargon technique.
                 </p>
               </div>
             </div>
@@ -774,5 +775,74 @@
   </button>
 
   <script src="assets/js/app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById('map-auchan');
+      if (!el) return;
+
+      var map = L.map('map-auchan', {
+        center: [49.58, 6.05],
+        zoom: 10,
+        scrollWheelZoom: false
+      });
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 19
+      }).addTo(map);
+
+      var iconDefault = L.divIcon({
+        className: '',
+        html: '<div class="map-marker"></div>',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
+        popupAnchor: [0, -10]
+      });
+
+      var iconHighlight = L.divIcon({
+        className: '',
+        html: '<div class="map-marker map-marker--highlight"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+        popupAnchor: [0, -12]
+      });
+
+      var sites = [
+        {
+          lat: 49.6333, lng: 6.1701,
+          nom: 'Auchan Kirchberg',
+          adresse: '5 Rue Alphonse Weicker, 2721 Kirchberg',
+          note: null,
+          icon: iconDefault
+        },
+        {
+          lat: 49.5829, lng: 6.1249,
+          nom: 'Auchan Cloche d\'Or (Lifestore)',
+          adresse: '25 Bd Friedrich Wilhelm Raiffeisen, 2411 Gasperich',
+          note: null,
+          icon: iconDefault
+        },
+        {
+          lat: 49.5207, lng: 5.8919,
+          nom: 'Auchan Differdange',
+          adresse: '1 Bd Emile Krieps, 4620 Differdange',
+          note: 'Site du Projet 1 — Réseau Barolux',
+          icon: iconHighlight
+        }
+      ];
+
+      sites.forEach(function (s) {
+        var popupHtml =
+          '<strong>' + s.nom + '</strong>' +
+          '<br><span class="map-popup-address">' + s.adresse + '</span>' +
+          (s.note ? '<br><span class="map-popup-note">' + s.note + '</span>' : '');
+
+        L.marker([s.lat, s.lng], { icon: s.icon })
+          .addTo(map)
+          .bindPopup(popupHtml, { className: 'map-popup' });
+      });
+    })();
+  </script>
 </body>
 </html>

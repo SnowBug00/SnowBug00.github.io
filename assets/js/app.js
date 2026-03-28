@@ -1,60 +1,12 @@
 (function () {
   const navToggle = document.getElementById("navToggle");
   const siteNav = document.getElementById("siteNav");
-  const themeToggle = document.getElementById("themeToggle");
   const navLinks = Array.from(document.querySelectorAll(".nav-link"));
   const sections = Array.from(document.querySelectorAll("main section[id]"));
   const backToTop = document.getElementById("backToTop");
   const revealElements = Array.from(document.querySelectorAll(".reveal"));
   const year = document.getElementById("year");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-
-    if (themeToggle) {
-      const isDark = theme === "dark";
-      const label = themeToggle.querySelector(".theme-toggle-label");
-
-      themeToggle.setAttribute("aria-pressed", String(isDark));
-      themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "Activer le thème clair" : "Activer le thème sombre"
-      );
-
-      if (label) {
-        label.textContent = isDark ? "Clair" : "Sombre";
-      }
-    }
-
-    if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", theme === "dark" ? "#0c1722" : "#123a52");
-    }
-  }
-
-  const savedTheme = window.localStorage.getItem("theme");
-  const initialTheme = savedTheme || (prefersDarkScheme.matches ? "dark" : "light");
-  applyTheme(initialTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const nextTheme =
-        document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-      window.localStorage.setItem("theme", nextTheme);
-      applyTheme(nextTheme);
-    });
-  }
-
-  prefersDarkScheme.addEventListener("change", (event) => {
-    if (window.localStorage.getItem("theme")) {
-      return;
-    }
-
-    applyTheme(event.matches ? "dark" : "light");
-  });
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
@@ -186,4 +138,48 @@
   } else {
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }
+
+  // ── Lightbox ──────────────────────────────────────────────────
+  const lightbox = document.createElement("div");
+  lightbox.id = "lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Image agrandie");
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Fermer">✕</button>
+    <img class="lightbox-img" src="" alt="" />
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add("is-open");
+    document.body.classList.add("lightbox-open");
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-open");
+  }
+
+  // Rend cliquables toutes les images marquées data-lightbox
+  document.querySelectorAll("img[data-lightbox]").forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+  });
 })();
