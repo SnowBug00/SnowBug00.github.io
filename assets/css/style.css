@@ -1097,12 +1097,12 @@ button {
 
 .veille-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
 }
 
 .veille-card-intro {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
 }
 
 .plain-list {
@@ -2080,4 +2080,183 @@ body.redirect-page {
   .reveal {
     transition: none;
   }
+}
+
+/* ── Veille — timeline évolution authentification ─────────── */
+
+.veille-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.veille-timeline::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #ef4444, #f59e0b, #22c55e);
+  border-radius: 2px;
+}
+
+.veille-timeline-step {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+}
+
+.veille-timeline-dot {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.veille-timeline-dot--old { background: #ef4444; box-shadow: 0 0 0 4px rgba(239,68,68,0.2); }
+.veille-timeline-dot--mid { background: #f59e0b; box-shadow: 0 0 0 4px rgba(245,158,11,0.2); }
+.veille-timeline-dot--new { background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
+
+.veille-timeline-content strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+.veille-timeline-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .veille-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Organigramme Barolux ───────────────────────────────────── */
+
+.orga-barolux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 1.25rem;
+}
+
+.orga-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.orga-row--techs {
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.orga-connector-v {
+  width: 2px;
+  height: 24px;
+  background: var(--line-strong);
+  margin: 0 auto;
+}
+
+/* Conteneur horizontal : ligne + drops vers les techniciens */
+.orga-connector-h-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.orga-connector-h-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Barre horizontale qui relie tous les techniciens */
+.orga-h-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 85%;
+  border-top: 2px solid var(--line-strong);
+  padding-top: 20px;
+  margin-top: 0;
+}
+
+/* Petite ligne verticale qui descend de la barre vers chaque node */
+.orga-h-bar > .orga-node::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--line-strong);
+}
+
+.orga-h-bar > .orga-node {
+  position: relative;
+}
+
+.orga-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  min-width: 120px;
+  text-align: center;
+}
+
+.orga-node--top {
+  border-color: var(--accent);
+  background: rgba(88, 166, 255, 0.07);
+}
+
+.orga-node--mid {
+  border-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.07);
+}
+
+.orga-node--tech {
+  border-color: var(--line-strong);
+}
+
+.orga-node--me {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.07);
+}
+
+.orga-name {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.orga-role {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
 }
