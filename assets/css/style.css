@@ -364,6 +364,10 @@ button {
   margin-top: 0.9rem;
 }
 
+.hero-actions {
+  margin-top: 2rem;
+}
+
 .hero-actions,
 .contact-actions,
 .legend,
@@ -963,6 +967,63 @@ button {
   color: var(--accent-strong);
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+/* ── Certification badge card ── */
+.cert-badge-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 0.5rem;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.cert-badge-link:hover .cert-badge {
+  border-color: var(--accent);
+  background: var(--surface-strong);
+}
+
+.cert-badge-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.cert-badge-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cert-badge-issuer {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.cert-badge-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.cert-badge-date {
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .skill-list,
