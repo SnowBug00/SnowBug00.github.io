@@ -410,6 +410,19 @@ button {
   transform: translateY(-1px);
 }
 
+.button--dl {
+  background: var(--surface-strong);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  box-shadow: none;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+.button--dl:hover {
+  background: var(--surface-soft);
+}
+
 .button-static {
   cursor: default;
   pointer-events: none;
@@ -699,6 +712,10 @@ button {
   margin-top: 4rem;
 }
 
+.volet--ref + .volet--ref {
+  margin-top: 0;
+}
+
 .volet-inner {
   display: grid;
   gap: 1.5rem;
@@ -967,6 +984,136 @@ button {
   color: var(--accent-strong);
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+/* ── Tableau de synthèse référentiel BTS SIO SISR ── */
+.referentiel-wrap {
+  margin-top: 3rem;
+}
+
+.referentiel-intro {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  font-size: 0.97rem;
+}
+
+.volet--ref .volet-inner {
+  padding: 0.75rem 0 0;
+}
+
+.referentiel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.referentiel-table thead th {
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.referentiel-table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s;
+}
+
+.referentiel-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.referentiel-table tbody tr:hover {
+  background: var(--surface-strong);
+}
+
+.referentiel-table td {
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+}
+
+.ref-bloc-header td {
+  background: var(--surface-soft);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.ref-code {
+  white-space: nowrap;
+  font-family: ui-monospace, monospace;
+  font-size: 0.82rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+  width: 3.5rem;
+}
+
+.ref-label {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.ref-real {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.ref-status {
+  text-align: center;
+  width: 2.5rem;
+}
+
+.ref-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ref-badge--ok {
+  background: var(--success-soft);
+  color: var(--success-text);
+}
+
+.ref-badge--partial {
+  background: rgba(210, 153, 34, 0.15);
+  color: #d29922;
+}
+
+.ref-badge--none {
+  background: var(--line);
+  color: var(--muted);
+}
+
+.ref-legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.ref-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 /* ── Certification badge card ── */
@@ -2455,6 +2602,16 @@ body.redirect-page {
     right: 0.75rem;
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .referentiel-table .ref-real {
+    display: none;
+  }
+
+  .referentiel-table thead th:nth-child(3) {
+    display: none;
   }
 }
 

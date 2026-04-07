@@ -941,33 +941,43 @@
         <div class="skills-grid">
           <article class="card skill-card reveal">
             <h3>Systèmes</h3>
-            <p>Administration de postes, environnement Windows et support utilisateur.</p>
+            <p>Administration de postes, environnement Windows, services réseau et support utilisateur.</p>
             <div class="skill-cloud">
               <span class="skill-pill">Windows</span>
               <span class="skill-pill">Active Directory</span>
+              <span class="skill-pill">DNS</span>
+              <span class="skill-pill">DHCP</span>
+              <span class="skill-pill">GPO</span>
               <span class="skill-pill">Déploiement de postes</span>
+              <span class="skill-pill">PingOne</span>
               <span class="skill-pill">Support utilisateur</span>
             </div>
           </article>
 
           <article class="card skill-card reveal">
             <h3>Réseau</h3>
-            <p>Déploiement d'infrastructures physiques et compréhension de l'architecture réseau.</p>
+            <p>Déploiement d'infrastructures physiques, sécurisation des échanges et architecture réseau.</p>
             <div class="skill-cloud">
               <span class="skill-pill">VLAN</span>
               <span class="skill-pill">Fibre optique</span>
               <span class="skill-pill">Switches Hirschmann</span>
               <span class="skill-pill">Câblage RJ45</span>
               <span class="skill-pill">Architecture réseau</span>
+              <span class="skill-pill">Routage</span>
+              <span class="skill-pill">Pare-feu Fortinet</span>
+              <span class="skill-pill">IPsec</span>
+              <span class="skill-pill">SSH</span>
             </div>
           </article>
 
           <article class="card skill-card reveal">
             <h3>Outils</h3>
-            <p>Outils utilisés pour le support, la gestion d'incidents et le suivi des demandes.</p>
+            <p>Outils utilisés pour le support, la gestion d'incidents, le suivi des demandes et les caisses.</p>
             <div class="skill-cloud">
               <span class="skill-pill">EasyVista</span>
               <span class="skill-pill">GLPI</span>
+              <span class="skill-pill">Extenda</span>
+              <span class="skill-pill">PingOne</span>
             </div>
           </article>
 
@@ -996,6 +1006,168 @@
             </a>
           </article>
         </div>
+
+        <!-- ── Tableau de synthèse référentiel ── -->
+        <div class="referentiel-wrap reveal">
+          <h3 style="font-size:1.15rem;margin:0 0 0.4rem;">Référentiel BTS SIO SISR — correspondance avec mes réalisations</h3>
+          <p class="referentiel-intro">
+            Tableau de synthèse croisant les compétences officielles du référentiel BTS SIO SISR et les réalisations concrètes issues de mon alternance.
+          </p>
+
+          <!-- ── Volet Bloc 1 ── -->
+          <div class="volet volet--ref" id="volet-ref-b1">
+            <button class="volet-trigger" aria-expanded="false" aria-controls="volet-ref-b1-content">
+              <span class="volet-trigger-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Bloc 1
+              </span>
+              <span class="volet-trigger-sub">Support et mise à disposition de services informatiques</span>
+              <svg class="volet-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="volet-content" id="volet-ref-b1-content">
+              <div class="volet-inner">
+                <table class="referentiel-table" aria-label="Bloc 1 — Support et mise à disposition de services informatiques">
+                  <thead>
+                    <tr>
+                      <th class="ref-code">Code</th>
+                      <th>Compétence officielle</th>
+                      <th>Réalisation concrète</th>
+                      <th class="ref-status" title="Niveau de couverture">Niv.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ref-code">B1.1</td>
+                      <td class="ref-label">Répondre aux incidents et aux demandes d'assistance</td>
+                      <td class="ref-real">Gestion quotidienne des tickets via EasyVista chez Auchan (Projet 4) — interventions sur caisses, postes, périphériques</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B1.2</td>
+                      <td class="ref-label">Mettre en place et vérifier les niveaux d'habilitation</td>
+                      <td class="ref-real">Administration des comptes utilisateurs via PingOne chez Auchan — créations, modifications, désactivations</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B1.3</td>
+                      <td class="ref-label">Mettre en production un service informatique</td>
+                      <td class="ref-real">Déploiement des postes HP sous domaine Windows lors de la migration Citrix (Projet 3) — préparation, intégration, remise en service</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B1.4</td>
+                      <td class="ref-label">Déployer un service de messagerie</td>
+                      <td class="ref-real">Gestion des accès e-mail via PingOne (attribution des droits) — déploiement complet non réalisé en autonomie</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--partial">~</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B1.5</td>
+                      <td class="ref-label">Gérer des sauvegardes</td>
+                      <td class="ref-real">Non abordé directement lors de l'alternance</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--none">—</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B1.6</td>
+                      <td class="ref-label">Mettre en place des mesures de supervision</td>
+                      <td class="ref-real">Suivi des incidents via EasyVista et tableaux de bord du service support Auchan</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--partial">~</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Volet Bloc 2 ── -->
+          <div class="volet volet--ref" id="volet-ref-b2" style="margin-top:0.75rem;">
+            <button class="volet-trigger" aria-expanded="false" aria-controls="volet-ref-b2-content">
+              <span class="volet-trigger-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Bloc 2
+              </span>
+              <span class="volet-trigger-sub">Administration des systèmes et des réseaux — SISR</span>
+              <svg class="volet-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="volet-content" id="volet-ref-b2-content">
+              <div class="volet-inner">
+                <table class="referentiel-table" aria-label="Bloc 2 — Administration des systèmes et des réseaux SISR">
+                  <thead>
+                    <tr>
+                      <th class="ref-code">Code</th>
+                      <th>Compétence officielle</th>
+                      <th>Réalisation concrète</th>
+                      <th class="ref-status" title="Niveau de couverture">Niv.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ref-code">B2.1</td>
+                      <td class="ref-label">Participer à la conception d'une architecture</td>
+                      <td class="ref-real">Conception du schéma réseau en étoile sur le site Auchan de Differdange — 6 switches Hirschmann reliés par fibre (Projet 1)</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.2</td>
+                      <td class="ref-label">Administrer et superviser les systèmes</td>
+                      <td class="ref-real">Intégration des postes HP au domaine Windows (Active Directory), déploiement via réseau PXE, gestion des comptes (Projet 3)</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.3</td>
+                      <td class="ref-label">Administrer et superviser le réseau</td>
+                      <td class="ref-real">Installation et câblage de switches Hirschmann, création de VLANs, interconnexion fibre optique (Projets 1 &amp; 2)</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.4</td>
+                      <td class="ref-label">Intervenir sur le stockage partagé</td>
+                      <td class="ref-real">Non abordé directement lors de l'alternance</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--none">—</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.5</td>
+                      <td class="ref-label">Garantir la confidentialité et l'intégrité des données</td>
+                      <td class="ref-real">Mise en place de tunnels IPsec chiffrés via pare-feux Fortinet entre les sites Barolux (Projet 2)</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.6</td>
+                      <td class="ref-label">Gérer les identités et les habilitations</td>
+                      <td class="ref-real">Gestion des comptes via PingOne chez Auchan — cycle de vie complet des identités sur l'ensemble des sites Luxembourg</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--ok">✓</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.7</td>
+                      <td class="ref-label">Mettre en place des solutions de haute disponibilité</td>
+                      <td class="ref-real">Non abordé directement lors de l'alternance</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--none">—</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ref-code">B2.8</td>
+                      <td class="ref-label">Mettre en place un service de serveur d'infrastructure</td>
+                      <td class="ref-real">Configuration des pare-feux Fortinet en tant qu'équipements d'infrastructure réseau (Projet 2)</td>
+                      <td class="ref-status"><span class="ref-badge ref-badge--partial">~</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.25rem;">
+            <a class="button button--dl" href="assets/img/Tableau_synthese_Alexi_Braun.xlsx" download>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Télécharger le tableau Excel
+            </a>
+          </div>
+
+          <div class="ref-legend">
+            <span class="ref-legend-item"><span class="ref-badge ref-badge--ok" style="width:1.3rem;height:1.3rem;font-size:0.7rem;">✓</span> Couvert par une réalisation concrète</span>
+            <span class="ref-legend-item"><span class="ref-badge ref-badge--partial" style="width:1.3rem;height:1.3rem;font-size:0.7rem;">~</span> Partiellement abordé</span>
+            <span class="ref-legend-item"><span class="ref-badge ref-badge--none" style="width:1.3rem;height:1.3rem;font-size:0.7rem;">—</span> Non couvert en alternance</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
