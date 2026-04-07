@@ -182,4 +182,99 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
   });
+
+  // ── Modal projets ─────────────────────────────────────────────
+  const projectModal = document.getElementById("projectModal");
+  const projectModalBody = document.getElementById("projectModalBody");
+
+  if (projectModal && projectModalBody) {
+    const modalBackdrop = projectModal.querySelector(".project-modal-backdrop");
+    const modalClose = projectModal.querySelector(".project-modal-close");
+
+    function openProjectModal(projectId) {
+      const tmpl = document.getElementById(projectId);
+      if (!tmpl) return;
+      projectModalBody.innerHTML = "";
+      projectModalBody.appendChild(tmpl.content.cloneNode(true));
+      projectModal.setAttribute("aria-hidden", "false");
+      projectModal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      projectModal.querySelector(".project-modal-panel").scrollTop = 0;
+    }
+
+    function closeProjectModal() {
+      projectModal.setAttribute("aria-hidden", "true");
+      projectModal.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    // handlers attachés plus bas avec initVolets/lightbox
+
+    modalClose.addEventListener("click", closeProjectModal);
+    modalBackdrop.addEventListener("click", closeProjectModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && projectModal.classList.contains("is-open")) closeProjectModal();
+    });
+  }
+
+  // ── Volets dépliants ──────────────────────────────────────────
+  function initVolets(root) {
+    root.querySelectorAll(".volet-trigger").forEach((trigger) => {
+      if (trigger._voletInit) return;
+      trigger._voletInit = true;
+      const volet = trigger.closest(".volet");
+      const content = volet.querySelector(".volet-content");
+
+      trigger.addEventListener("click", () => {
+        const isOpen = volet.hasAttribute("data-open");
+        if (isOpen) {
+          content.style.height = content.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => { content.style.height = "0"; });
+          });
+          volet.removeAttribute("data-open");
+          trigger.setAttribute("aria-expanded", "false");
+        } else {
+          volet.setAttribute("data-open", "");
+          trigger.setAttribute("aria-expanded", "true");
+          content.style.height = content.scrollHeight + "px";
+          content.addEventListener("transitionend", function onEnd() {
+            content.style.height = "auto";
+            content.removeEventListener("transitionend", onEnd);
+          }, { once: true });
+        }
+      });
+    });
+  }
+
+  initVolets(document);
+
+  // ── Lightbox dans le modal ────────────────────────────────────
+  function initLightboxIn(root) {
+    root.querySelectorAll("img[data-lightbox]").forEach((img) => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    });
+  }
+
+  // Ré-init volets + lightbox après ouverture modal projet
+  const _origOpen = projectModal && projectModalBody ? openProjectModal : null;
+  if (projectModal && projectModalBody) {
+    document.querySelectorAll(".project-tile").forEach((tile) => {
+      tile.removeEventListener("click", tile._modalHandler);
+      tile._modalHandler = () => {
+        const tmpl = document.getElementById(tile.dataset.project);
+        if (!tmpl) return;
+        projectModalBody.innerHTML = "";
+        projectModalBody.appendChild(tmpl.content.cloneNode(true));
+        initVolets(projectModalBody);
+        initLightboxIn(projectModalBody);
+        projectModal.setAttribute("aria-hidden", "false");
+        projectModal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        projectModal.querySelector(".project-modal-panel").scrollTop = 0;
+      };
+      tile.addEventListener("click", tile._modalHandler);
+    });
+  }
 })();
